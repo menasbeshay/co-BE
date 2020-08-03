@@ -23,3 +23,5 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    - name: deploy
+      run: dotnet publish -c Release -p:PublishTrimmed=true -o publish 
